@@ -1,0 +1,170 @@
+<!-- Keep your head / CSS as is -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advocate | Advocate Jagdeep Jotwal</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root{
+      --gold:#b3904a;
+      --gold-600:#a67d35;
+      --muted:#6b7280;
+    }
+    body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,#f8fafc 0%, #ffffff 100%);} 
+    .brand-bg{background:linear-gradient(90deg,rgba(183,147,74,0.06), rgba(59,130,246,0.02));}
+    .gold{background:var(--gold);}
+    .gold-text{color:var(--gold);} 
+    .glass{backdrop-filter: blur(6px); background: rgba(255,255,255,0.6);} 
+    /* Floating CTA Buttons */
+    .floating-cts{position:fixed;right:20px;bottom:30px;display:flex;flex-direction:column;gap:12px;z-index:60}
+    .cta-btn{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;box-shadow:0 8px 30px rgba(15,23,42,0.12);font-weight:600}
+    .cta-gold{background:var(--gold);color:#fff}
+    .cta-green{background:#10b981;color:#fff}
+    .cta-blue{background:#2563eb;color:#fff}
+    /* testimonial quote */
+    .quote::before{content:'\201C';font-size:36px;color:var(--gold);}
+  </style>
+</head>
+
+<body>
+<main class="max-w-6xl mx-auto p-6 lg:p-12">
+  <!-- Hero, Specializations, Testimonials ... same as before -->
+  <!-- Hero -->
+    <header id="home" class="bg-white rounded-2xl shadow-lg overflow-hidden brand-bg p-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-8">
+      <div data-aos="fade-right" data-aos-duration="800">
+        <div class="w-40 h-40 rounded-full border-4 border-white shadow-lg mx-auto md:mx-0 overflow-hidden">
+		  <img src="https://prodigits.co.uk/thumbs/wallpapers/p2ls/logo-brands/45/b3657c6912362761.jpg"
+			   alt="Advocate"
+			   class="w-full h-full object-cover scale-150 transform origin-center">
+		</div>
+      </div>
+      <div data-aos="fade-left" data-aos-duration="800">
+        <h1 class="text-4xl font-extrabold mb-2">Advocate Jagdeep Jotwal</h1>
+        <p class="text-lg text-gray-600 mb-4 max-w-xl">Trusted legal counsel for family, property and corporate affairs. Over 15 years of experience delivering clear, practical, and ethical legal advice.</p>
+        <div class="flex flex-wrap gap-3">
+          <button id="bookNowHero" class="px-5 py-3 rounded-lg cta-gold cta-btn"><i class="fas fa-calendar-alt"></i> Book Consultation</button>
+          <button id="freeQHero" class="px-5 py-3 rounded-lg bg-white border border-gray-200 cta-btn" onclick="document.getElementById('query').focus();">Ask a Quick Question</button>
+        </div>
+        <div class="mt-5 text-sm text-gray-500">Member: Bar Council of India • Practicing at Gurgaon District Court</div>
+      </div>
+    </header>
+
+    <!-- Specializations -->
+    <section id="specializations" class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">Core Areas of Practice</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-5 bg-white rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in">
+          <i class="fas fa-briefcase text-2xl gold-text mb-2"></i>
+          <h3 class="font-semibold">Corporate & Commercial Law</h3>
+          <p class="text-sm text-gray-600 mt-1">We help businesses close deals, draft contracts, and stay compliant.</p>
+        </div>
+        <div class="p-5 bg-white rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="80">
+          <i class="fas fa-landmark text-2xl gold-text mb-2"></i>
+          <h3 class="font-semibold">Real Estate & Property Law</h3>
+          <p class="text-sm text-gray-600 mt-1">Title disputes, sale agreements, litigation support and property recovery.</p>
+        </div>
+        <div class="p-5 bg-white rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="160">
+          <i class="fas fa-users text-2xl gold-text mb-2"></i>
+          <h3 class="font-semibold">Family & Matrimonial Law</h3>
+          <p class="text-sm text-gray-600 mt-1">Divorce, maintenance, custody and amicable settlements where possible.</p>
+        </div>
+        <div class="p-5 bg-white rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="240">
+          <i class="fas fa-balance-scale text-2xl gold-text mb-2"></i>
+          <h3 class="font-semibold">Constitutional & Writs</h3>
+          <p class="text-sm text-gray-600 mt-1">Representation on matters concerning fundamental rights and writs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials & CTA strip -->
+    <section class="mb-10 bg-gradient-to-r from-white to-yellow-50 rounded-xl p-6 shadow-inner" data-aos="fade-up">
+      <div class="flex flex-col lg:flex-row gap-6 items-center">
+        <div class="flex-1">
+          <h3 class="text-xl font-semibold">What Clients Say</h3>
+          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow">
+              <div class="text-sm text-gray-600 quote">Advocate Jotwal guided us step by step and delivered a favorable outcome. Highly recommended.</div>
+              <div class="mt-3 text-xs text-gray-500 font-semibold">— Ravi Mehta</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+              <div class="text-sm text-gray-600 quote">Professional, prompt, and compassionate during our family matter. Thank you.</div>
+              <div class="mt-3 text-xs text-gray-500 font-semibold">— Sunita Kapoor</div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-64 p-4 text-center bg-white rounded-lg shadow">
+          <div class="text-sm text-gray-500">Need urgent legal advice?</div>
+          <button class="mt-4 px-4 py-2 rounded-full cta-gold cta-btn w-full" onclick="openTel(); return false;">
+		  <i class="fas fa-phone"></i> Call Now
+		</button>
+        </div>
+      </div>
+    </section>
+
+  <!-- Ask Me Anything Form -->
+  <section id="ama" class="bg-white p-6 rounded-xl shadow mb-10">
+    <h2 class="text-2xl font-semibold mb-4">Ask Me Anything (Secure)</h2>
+    <form id="queryForm" class="space-y-4">
+      <input type="text" id="name" name="name" required placeholder="Your full name">
+      <input type="email" id="email" name="email" placeholder="Email (optional)">
+      <input type="tel" id="phone" name="phone" placeholder="Phone (optional)">
+      <select id="urgency">
+        <option value="normal">Normal</option>
+        <option value="urgent">Urgent</option>
+        <option value="followup">Follow-up</option>
+      </select>
+      <textarea id="query" name="query" rows="6" required placeholder="Describe your legal question..."></textarea>
+      <div id="messageBox" class="hidden p-3 rounded-lg text-sm text-center font-medium"></div>
+      <button type="submit">Submit Your Query</button>
+    </form>
+  </section>
+</main>
+
+<script>
+const queryForm = document.getElementById("queryForm");
+const messageBox = document.getElementById("messageBox");
+
+queryForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const queryText = document.getElementById("query").value.trim();
+  const urgency = document.getElementById("urgency").value;
+
+  if(name.length < 3){ alert("Name at least 3 characters"); return; }
+  if(queryText.length < 10){ alert("Query at least 10 characters"); return; }
+
+  // POST to Netlify Function
+  try {
+    const res = await fetch("/.netlify/functions/submit-query", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, phone, queryText, urgency })
+    });
+    const data = await res.json();
+    if(data.success){
+      messageBox.textContent = "Query submitted successfully!";
+      messageBox.className = "p-3 mb-4 rounded-lg text-center text-green-700";
+      queryForm.reset();
+    } else {
+      messageBox.textContent = "Error: " + data.message;
+      messageBox.className = "p-3 mb-4 rounded-lg text-center text-red-700";
+    }
+    messageBox.classList.remove("hidden");
+  } catch(err){
+    console.error(err);
+    alert("Submission failed, please try again later.");
+  }
+});
+</script>
+</body>
